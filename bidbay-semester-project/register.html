@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css">
+  <script src="https://kit.fontawesome.com/788eb041ae.js" crossorigin="anonymous"></script>
+  <title> BidBay</title>
+</head>
+
+
+
+<body class="font-body font-light">
+
+
+
+
+
+<div class="form-container w-screen h-screen bg-gray-100 flex flex-col justify-center ">
+
+  <form action="" class="flex flex-col items-center self-center mx-auto p-6 bg-gray-100">
+    <div class=" w-100 bg-gray-100 flex flex-row self-start items-center pb-8 pt-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="black" class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+      </svg>
+      <a href="./index.html" class="underline text-black text-xs">
+      Back home</a>
+    </div>
+    <div class="title pb-8 flex items-center">
+      <img src="./public/img/blacksmall.png" alt="" class="">
+      <h1 class="font-display text-4xl text-center">    Dive in!</h1>  
+    </div>
+
+    <div class=""> 
+        <i class="fa-regular fa-circle-user"></i>
+          
+        <input id="register-name" type="text" placeholder="Name" class="bg-gray-100 text-center text-lg">
+  
+      </div>
+
+    <div class=" m-2"> 
+      <i class="fa-solid fa-at"></i>
+      <input id="register-email" type="text" placeholder="Email" class="bg-gray-100 text-center text-lg">
+
+    </div>
+    <div class="">
+      <i class="fa-solid fa-key"></i>
+      <input id="register-password" type="text" placeholder="Password" class="bg-gray-100 text-center text-lg">
+
+
+    </div>
+    <button type="button" class="btn bg-fuchsia-500 text-white m-4 w-full"> Sign up </button>
+    <span class="text-sm text-center">Already a member?<br> Sign in <strong><a href="./login.html" class="underline text-rose-500"> here </a></strong></span>
+  </form>
+</div>
+
+
+
+
+  <footer class="bg-slate-900 flex flex-col items-center text-slate-200 text-sm p-6 bg-[url('/img/footerpattern.png')] bg-repeat bg-contain">
+    <div class="logo self-center mb-4 transition-transform 700ms ease-in-out hover:rotate-180">
+      <img src="/img/whitesmall.png" alt="">
+    </div>
+    
+    <div class="logo-and-links flex flex-row gap-6 uppercase items-center w-100 text-center">
+     <div class="buttons p-4"> 
+
+      <ul class="text-sm uppercase text-white">
+        <li class=" px-2 py-1 rounded-xl mb-1 hover:glow-light"><a href="register.html"> sign up </a></li>
+        <li class=" px-2 py-1 rounded-xl hover:glow-light"><a href="login.html"> sign in </a></li>
+      </ul>
+     </div>
+    
+     
+      <ul class="text-right p-4">
+        
+        <li class=" hover:glow-light"><a href="about.html"> about  </a></li>
+        <li class="hover:glow-light"><a href="contact.html"> contact </a></li>
+        <li class="hover:glow-light"><a href=""> privacy </a></li>
+      </ul>
+      
+    </div>
+    <div class="italic"> Visit us at:</div>
+    <div class="socials m-2 flex flex-row gap-2 text-xl">
+      <a href=""><i class="fa-brands fa-twitter hover:text-sky-400"></i></a>
+      <a href=""><i class="fa-brands fa-instagram hover:text-yellow-300"></i></a>
+      <a href=""><i class="fa-brands fa-github hover:text-lime-400"></i></a>
+      <a href=""><i class="fa-brands fa-facebook hover:text-blue-700"></i></a>
+    </div>
+    <div class="copyright text-center text-xs text-zinc-800 mt-2">
+      <span>2023@bidbay.com <br> by:<a href="" class="hover:text-lime-400"> github/aerochippie</a></span>
+    </div>
+  </footer>
+       
+</body>
+  <script type="module" src="./src/main.js"></script>
+
+
+</html>

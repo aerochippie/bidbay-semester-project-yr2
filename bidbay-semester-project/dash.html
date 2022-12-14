@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css">
+  <script src="https://kit.fontawesome.com/788eb041ae.js" crossorigin="anonymous"></script>
+  <title> BidBay</title>
+</head>
+
+
+
+<body class="font-body font-light overflow-x-hidden">
+
+
+<div class="main-container flex flex-col bg-gray-100">
+<div class="nav-container flex flex-col  px-4 md:justify-between  md:rounded-xl md:w-2/3 md:mx-auto md:my-6">
+  <div class="left flex flex-row items-center text-gray-900 justify-center py-4">
+    <div  class="logo">
+      <img src="public/img/blacksmall.png" alt="">
+    </div>
+    <div class="flex flex-col">
+      <div class="top">
+        <h1 class="text-xl"><strong class="font-display text-3xl">Hello,</strong> username!</h1>
+      </div>
+<div class="bottom flex flex-row items-center">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+  </svg>
+  <span class="text-sm pl-1"> your balance: -balance-</span>
+</div>
+
+    </div>
+   
+  </div>
+  <div class="right flex flex-row items-center justify-center gap-4">
+   <a href="dash.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+    </svg></a>
+    <a href="profile.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>
+    </a>
+    <a href="listings.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+    </svg>
+    </a>
+    <a href=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+    </svg>
+    </a>
+    <img src="public/img/pexels-photo-1009904.jpeg" alt="" class="rounded-full w-14 h-14 object-cover hidden md:block">
+  </div>
+</div>
+<div class="middle-container flex flex-col justify-between  md:flex-row lg:flex-row xl:flex-row">
+
+
+  <div class="left bg-gray-100 py-8 px-6">
+    <div class="form-container p-4 place-items-center">
+      <form action="" class="flex flex-col gap-1">
+        <div class="text-center">
+          <h2 class="font-display text-3xl py-4"> Add a listing </h2>
+
+
+        </div>
+        <input class="p-1" type="text" placeholder="Item name">
+        <input class="p-1" type="text" placeholder="Tags">
+        <input class="p-1" type="text" placeholder="Ends at">
+        <input class="p-1" type="text" placeholder="Images">
+        <textarea name="" id="" cols="30" rows="5" placeholder="Description"></textarea>
+        <button type="submit" class="btn bg-rose-500 w-full rounded-sm text-white"> Add </button>
+      </form>
+    </div>
+  </div>
+  <div class="right flex flex-col">
+    <div class="quotes bg-indigo-500 p-6 w-full text-white">
+      <blockquote class="italic font-semibold">
+        <p>"Howl uncontrollably for no reason meeeeouw stand with legs in litter box, but poop outside sit by the fire."</p>
+      </blockquote>
+    </div>
+    <div class="facts bg-gray-100 text-center p-6">
+<span> total listings posted: -number <br>
+  total of listing i posted: -number- <br>
+ total users on platform: -number </span>
+    </div>
+  </div>
+</div>
+
+<div class="listing-container">
+
+  <div class="bids-won flex flex-col items-center">
+    <div class="title font-display text-3xl p-4">
+      <h3> Bids won</h3>
+    </div>
+    <div class="card flex flex-row px-2 py-4 w-5/6 rounded-xl justify-around items-center">
+      <div class="image w-1/2">
+        <img src="public/img/exampleimg.jpeg" alt="" class="w-50 h-50 object-fill rounded-xl">
+      </div>
+      <div class="description flex flex-col text-gray-900">
+        <div class="title text-xl">
+          <span> <strong> Item Name </strong>   </span>
+        </div>
+        <div class="author text-xs italic">
+          <span> author name</span>
+        </div>
+        <div class="coins flex flex-row">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+            </svg>
+          </div>
+          <div class="number">
+            <span><strong>4554</strong></span>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+    <div class="card flex flex-row px-2 py-4 w-5/6 rounded-xl justify-around items-center">
+      <div class="image w-1/2">
+        <img src="public/img/exampleimg.jpeg" alt="" class="w-50 h-50 object-fill rounded-xl">
+      </div>
+      <div class="description flex flex-col text-gray-900">
+        <div class="title text-xl">
+          <span> <strong> Item Name </strong>   </span>
+        </div>
+        <div class="author text-xs italic">
+          <span> author name</span>
+        </div>
+        <div class="coins flex flex-row">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+            </svg>
+          </div>
+          <div class="number">
+            <span><strong>4554</strong></span>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  
+<div class="bids-posted flex flex-col items-center">
+  <div class="title font-display text-3xl p-4">
+    <h3> Your listings </h3>
+  </div>
+  <div class="card flex flex-col px-2 py-4 rounded-xl justify-around items-center">
+    <div class="image w-4/5">
+      <img src="public/img/exampleimg.jpeg" alt="" class="w-50 h-50 object-fill rounded-xl">
+    </div>
+    <div class="description flex flex-col text-gray-900 items-center gap-1">
+      <div class="title text-xl">
+        <span> <strong> Item Name </strong>   </span>
+      </div>
+      <div class="author text-xs italic">
+        <span> author name</span>
+      </div>
+      <div class="coins flex flex-row">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+          </svg>
+        </div>
+        <div class="number">
+          <span><strong>4554</strong></span>
+        </div>
+     
+      </div>
+      <div class="buttons flex flex-row text-sm gap-2">
+        <button class="btn bg-lime-500 text-white">Open</button>
+        <button class="btn bg-yellow-400"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+        </svg>
+        </button>
+        <button class="btn bg-red-600"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+        </svg>
+        </button>
+      </div>
+    </div>
+  
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+  <footer class="bg-slate-900 flex flex-col items-center text-slate-200 text-sm p-6 bg-[url('/img/footerpattern.png')] bg-repeat bg-contain">
+    <div class="logo self-center mb-4 transition-transform 700ms ease-in-out hover:rotate-180">
+      <img src="/img/whitesmall.png" alt="">
+    </div>
+    
+    <div class="logo-and-links flex flex-row gap-6 uppercase items-center w-100 text-center">
+     <div class="buttons p-4"> 
+
+      <ul class="text-sm uppercase text-white">
+        <li class=" px-2 py-1 rounded-xl mb-1 hover:glow-light"><a href="register.html"> sign up </a></li>
+        <li class=" px-2 py-1 rounded-xl hover:glow-light"><a href="login.html"> sign in </a></li>
+      </ul>
+     </div>
+    
+     
+      <ul class="text-right p-4">
+        
+        <li class=" hover:glow-light"><a href="about.html"> about  </a></li>
+        <li class="hover:glow-light"><a href="contact.html"> contact </a></li>
+        <li class="hover:glow-light"><a href=""> privacy </a></li>
+      </ul>
+      
+    </div>
+    <div class="italic"> Visit us at:</div>
+    <div class="socials m-2 flex flex-row gap-2 text-xl">
+      <a href=""><i class="fa-brands fa-twitter hover:text-sky-400"></i></a>
+      <a href=""><i class="fa-brands fa-instagram hover:text-yellow-300"></i></a>
+      <a href=""><i class="fa-brands fa-github hover:text-lime-400"></i></a>
+      <a href=""><i class="fa-brands fa-facebook hover:text-blue-700"></i></a>
+    </div>
+    <div class="copyright text-center text-xs text-zinc-800 mt-2">
+      <span>2023@bidbay.com <br> by:<a href="" class="hover:text-lime-400"> github/aerochippie</a></span>
+    </div>
+  </footer>
+       
+</body>
+  <script type="module" src="./src/main.js"></script>
+
+
+</html>
