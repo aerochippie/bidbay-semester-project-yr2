@@ -1,5 +1,6 @@
 const baseUrl = "https://api.noroff.dev"
 const quoteUrl = `${baseUrl}/api/v1/quotes/random`
+const catsUrl = `${baseUrl}/api/v1/cat-facts/random`
 
 
 const accessToken = localStorage.getItem('bearerToken')
@@ -25,25 +26,22 @@ async function getUser(url) {
 getUser(userUrl)
 
 function consumeUser(data) {
-    const credits = document.getElementById("credits")
-    const welcomeMessage = document.getElementById("welcome-message")
-    const avatar = document.getElementById("profile-avatar")
-    const profileName = document.getElementById("profile-name")
-    const profileEmail = document.getElementById("profile-email")
-    const profileCredits = document.getElementById("profile-credits")
-    const profileTotalListings = document.getElementById("profile-total-listings")
-    const profileTotalWon = document.getElementById("profile-total-won")
+    const credits = document.getElementById("credits");
+    const welcomeMessage = document.getElementById("welcome-message");
+const avatarImage= document.getElementById("hero-avatar-img")
+    credits.innerHTML += `<strong>${data.credits}</strong>`;
+    welcomeMessage.innerHTML += `${data.name}`;
 
-    credits.innerHTML += `<strong>${data.credits}</strong>`
-    welcomeMessage.innerHTML += `${data.name}`
-    profileEmail.innerHTML += `${data.email}`
-    avatar.innerHTML += `
-     <img src="${data.avatar}" alt="" class="rounded-full w-32 h-32 object-cover" ">`
-     profileName.innerHTML += `${data.name}`
-     profileCredits.innerHTML += `${data.credits}`
-     profileTotalListings.innerHTML += `${data._count.listings}`
-    profileTotalWon.innerHTML += `${data.wins.length}`
+    if(data.avatar === null){
+        document.getElementById("hero-avatar-img").src = `
+    https://images.unsplash.com/photo-1562040506-a9b32cb51b94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80`; 
+    } else {
+        document.getElementById("hero-avatar-img").src = `${data.avatar}`;
 
+    }
+  
+
+ 
 
 }
 
@@ -67,6 +65,27 @@ function consumeQuote(data) {
 }
 getQuote(quoteUrl);
 
+async function getCats(url) {
+    const options = {
+        headers: {
+            Authorization: "Bearer " + accessToken,
+            "Content-Type": "application/json",
+        }
+    };
+    const response = await fetch(url, options);
+    const json = await response.json();
+    console.log(json)
+    consumeCats(json)
+}
+
+function consumeCats(data) {
+    const catFact = document.getElementById("cat-fact")
+    catFact.innerHTML +=`${data.text}`
+
+}
+
+getCats(catsUrl)
+
 async function newListing(url, listing) {
     const data = {
         method: "POST",
@@ -77,7 +96,13 @@ async function newListing(url, listing) {
         body: JSON.stringify(listing)
     };
     const response = await fetch(url, data)
+ 
     const json = await response.json();
+
+
+    if (response.ok) {
+        window.location.reload();
+    }
     console.log(json)
 
 }
@@ -113,6 +138,9 @@ export function newListingFormValidation(e) {
     if (image2 === '') {
         imageArr = new Array(image)
     }
+    if (image === '', image2 === '', image3 ==='') {
+        imageArr = []
+      }
     const listing = {
         title: itemName,
         endsAt: endsAt,
@@ -120,7 +148,22 @@ export function newListingFormValidation(e) {
         media: imageArr,
         description: description
     };
+  
+
     newListing(newListingUrl, listing)
 }
 const addListingButton = document.getElementById("add-listing-button")
 addListingButton.addEventListener('click', newListingFormValidation)
+
+console.log(totalMyListings)
+
+const logOutButton = document.getElementById('logout');
+
+function logOut(){
+    localStorage.removeItem("bearerToken")
+    localStorage.removeItem("username")
+    window.location = "../index.html"
+}
+
+logOutButton.addEventListener('click', logOut()
+)

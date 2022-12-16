@@ -16,107 +16,65 @@
 
 
 <div class="main-container flex flex-col bg-gray-100">
-<div class="nav-container flex flex-col  px-4 md:justify-between  md:rounded-xl md:w-2/3 md:mx-auto md:my-6">
-  <div class="left flex flex-row items-center text-gray-900 justify-center py-4">
-    <div  class="logo">
-      <img src="public/img/blacksmall.png" alt="">
-    </div>
-    <div class="flex flex-col">
-      <div class="top">
-        <h1 class="text-xl"><strong class="font-display text-3xl">Hello,</strong> username!</h1>
+  <div class="nav-container flex flex-col  px-4 md:justify-between  md:rounded-xl md:w-2/3 md:mx-auto md:my-6">
+    <div class="left flex flex-row items-center text-gray-900 justify-center py-4">
+      <div  class="logo">
+        <img src="public/img/blacksmall.png" alt="">
       </div>
-<div class="bottom flex flex-row items-center">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-  </svg>
-  <span class="text-sm pl-1"> your balance: -balance-</span>
-</div>
-
+      <div class="flex flex-col">
+        <div class="top">
+          <h1 class="text-xl" id="welcome-message"><strong class="font-display text-3xl">Hello, </strong></h1>
+        </div>
+  <div class="bottom flex flex-row items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+    </svg>
+    <span class="text-sm pl-1" id="credits"> your balance: </span>
+  </div>
+  
+      </div>
+     
     </div>
-   
+    <div class="right flex flex-row items-center justify-center gap-4">
+     <a href="dash.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg></a>
+      <a href="profile.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      </a>
+      <a href="listings.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+      </svg>
+      </a>
+      <button id="logout" type="button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+      </svg>
+    </button>
+      <img id="hero-avatar-img" src="" alt="" class="rounded-full w-14 h-14 object-cover hidden md:block">
+    </div>
   </div>
-  <div class="right flex flex-row items-center justify-center gap-4">
-   <a href="dash.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-    </svg></a>
-    <a href="profile.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-    </svg>
-    </a>
-    <a href="listings.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
-    </svg>
-    </a>
-    <a href=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
-    </svg>
-    </a>
-    <img src="public/img/pexels-photo-1009904.jpeg" alt="" class="rounded-full w-14 h-14 object-cover hidden md:block">
-  </div>
-</div>
 
 
 
 
 <form>   
-    <div class="flex flex-row text-sm my-10 text-white  bg-gray-900 ">
+    <div class="flex flex-row text-sm my-10  text-white bg-gray-900 ">
 
-        <input type="search" id="search" class= "w-full  bg-gray-900 p-4 " placeholder="Search..." required>
+        <input type="search" id="search" class= "w-full bg-gray-900 p-4 " placeholder="Search..." required>
     </div>
 </form>
 
+<div class="title font-display text-3xl p-4 text-center">
+  <h3> All listings </h3>
+</div>
+  <div  class=" justify-center md:mx-auto bids-posted flex flex-col items-center mx-3 gap-2 md:flex md:flex-row md:flex-wrap" id="all-listings-show">
+   
 
-<div id="all-listings" class="cards-container">
+  </div>
 
 </div>
-<!-- <div class="card flex flex-row px-2 py-4 w-5/6 rounded-xl justify-around items-center">
-  <div class="image w-1/2">
-    <img src="public/img/exampleimg.jpeg" alt="" class="w-50 h-50 object-fill rounded-xl">
-  </div>
-  <div class="description flex flex-col text-gray-900">
-    <div class="title text-xl">
-      <span> <strong> Item Name </strong>   </span>
-    </div>
-    <div class="author text-xs italic">
-      <span> author name</span>
-    </div>
-    <div class="coins flex flex-row">
-      <div class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-        </svg>
-      </div>
-      <div class="number">
-        <span><strong>4554</strong></span>
-      </div>
-   
-    </div>
-  </div>
-</div> -->
-<!-- <div class="card flex flex-row px-2 py-4 w-5/6 rounded-xl justify-around items-center">
-  <div class="image w-1/2">
-    <img src="public/img/exampleimg.jpeg" alt="" class="w-50 h-50 object-fill rounded-xl">
-  </div>
-  <div class="description flex flex-col text-gray-900">
-    <div class="title text-xl">
-      <span> <strong> Item Name </strong>   </span>
-    </div>
-    <div class="author text-xs italic">
-      <span> author name</span>
-    </div>
-    <div class="coins flex flex-row">
-      <div class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-        </svg>
-      </div>
-      <div class="number">
-        <span><strong>4554</strong></span>
-      </div>
-   
-    </div>
-  </div>
-</div> -->
+
 </div>
 
 
@@ -161,6 +119,7 @@
 </body>
   <script type="module" src="./src/main.js"></script>
   <script type="module" src="./src/listings.js"></script>
+  <script type="module" src="./src/dash.js"></script>
 
 
 </html>

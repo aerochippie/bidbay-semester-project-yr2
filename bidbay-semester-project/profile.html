@@ -14,6 +14,16 @@
 
 <body class="font-body font-light overflow-x-hidden">
 
+  <div id="change-avatar-form" class="change-avatar-form fixed w-screen h-screen bg-slate-700 bg-opacity-90 hidden ">
+    <div class="inner relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-6 w-full md:p-0 md:w-1/3 flex flex-col"> 
+    <input id="avatar-url" class=" p-4" type="text" placeholder="new avatar url:">
+    <div class="flex flex-col align-middle justify-center md:flex-row">
+      <button id="save-avatar" class="btn bg-lime-300 rounded-none w-full md:w-1/3"> Save </button> 
+      <button id="cancel-avatar" class="btn bg-rose-500 rounded-none w-full md:w-1/3"> Cancel </button> 
+    </div>
+  </div>
+</div>
+
 
 <div class="main-container flex flex-col bg-gray-100">
 <div class="nav-container flex flex-col  px-4 md:justify-between  md:rounded-xl md:w-2/3 md:mx-auto md:my-6">
@@ -51,7 +61,7 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
     </svg>
     </a>
-    <img src="public/img/pexels-photo-1009904.jpeg" alt="" class="rounded-full w-14 h-14 object-cover hidden md:block">
+    <img id="hero-avatar-img" src="" alt="" class="rounded-full w-14 h-14 object-cover hidden md:block">
   </div>
 </div>
 
@@ -59,16 +69,18 @@
 
 
 
+</div>
+        
 
 <div class="profile-container w-screen py-28">
     <div class="profile flex flex-col w-2/3 p-4 mx-auto">
-        <div class="flex flex-col items-center justify-center" id="profile-avatar">
+        <div class="flex flex-col items-center justify-center" >
+          <img id="profile-avatar" src="" alt="" class="rounded-full w-32 h-32 object-cover">
         
-        
-        
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                      </svg>
+        <button class="w-1/8 items-center flex flex-row p-1" id="edit-avatar-button">  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+        </svg></button>
+                   
             
         </div>
         <div class="text-center">
@@ -78,9 +90,7 @@
             <span id="profile-total-listings"> listings:  </span><br>
             <span id="profile-total-won"> bids won: </span>
 
-        </div>
-        
-               
+ 
             
 
     </div>
@@ -132,7 +142,7 @@
        
 </body>
   <script type="module" src="./src/main.js"></script>
-  <script type="module" src="./src/dash.js"></script>
+  <script type="module" src="./src/profile.js"></script>
 
 
 </html>
