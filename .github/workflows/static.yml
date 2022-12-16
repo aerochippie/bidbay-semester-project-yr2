@@ -31,8 +31,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Dependencies
+        working-directory: /home/runner/work/bidbay-semester-project-yr2/bidbay-semester-project/package.json
         run: npm i
       - name: Build vite
+        working-directory: /home/runner/work/bidbay-semester-project-yr2/bidbay-semester-project/package.json
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v2
