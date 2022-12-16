@@ -23,13 +23,13 @@
     </div>
     <div class="flex flex-col">
       <div class="top">
-        <h1 class="text-xl"><strong class="font-display text-3xl">Hello,</strong> username!</h1>
+        <h1 class="text-xl" id="welcome-message"><strong class="font-display text-3xl">Hello, </strong></h1>
       </div>
 <div class="bottom flex flex-row items-center">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
     <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
   </svg>
-  <span class="text-sm pl-1"> your balance: -balance-</span>
+  <span class="text-sm pl-1" id="credits"> your balance: </span>
 </div>
 
     </div>
@@ -65,19 +65,28 @@
 
 
         </div>
-        <input class="p-1" type="text" placeholder="Item name">
-        <input class="p-1" type="text" placeholder="Tags">
-        <input class="p-1" type="text" placeholder="Ends at">
-        <input class="p-1" type="text" placeholder="Images">
-        <textarea name="" id="" cols="30" rows="5" placeholder="Description"></textarea>
-        <button type="submit" class="btn bg-rose-500 w-full rounded-sm text-white"> Add </button>
+        <input id="item-name" class="p-1" type="text" placeholder="Item name">
+        <span id="item-name-error"></span>
+        <input id="tags" class="p-1" type="text" placeholder="Tags">
+        <span id="tags-error"> Tags must be separated with a comma ( , )</span>
+        <input id="ends-at" class="p-1" type="date" placeholder="Ends at">
+        <span id="ends-at-error"></span>
+        <input id="images" class="p-1" type="text" placeholder="Image URL">
+        <input id="images2" class="p-1" type="text" placeholder="Image URL">
+        <input id="images3" class="p-1" type="text" placeholder="Image URL">
+        <textarea name="" id="description" cols="30" rows="5" placeholder="Description"></textarea>
+
+
+        <button id="add-listing-button" type="submit" class="btn bg-rose-500 w-full rounded-sm text-white"> Add </button>
       </form>
     </div>
   </div>
   <div class="right flex flex-col">
     <div class="quotes bg-indigo-500 p-6 w-full text-white">
       <blockquote class="italic font-semibold">
-        <p>"Howl uncontrollably for no reason meeeeouw stand with legs in litter box, but poop outside sit by the fire."</p>
+       
+        <p id="random-quote"></p>
+      <p id="quote-author"></p>
       </blockquote>
     </div>
     <div class="facts bg-gray-100 text-center p-6">
@@ -230,7 +239,7 @@
   </footer>
        
 </body>
-  <script type="module" src="./src/main.js"></script>
+  <script type="module" src="./src/dash.js"></script>
 
 
 </html>

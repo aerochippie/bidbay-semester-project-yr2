@@ -32,26 +32,60 @@
       <img src="./public/img/blacksmall.png" alt="" class="">
       <h1 class="font-display text-4xl text-center">    Dive in!</h1>  
     </div>
+    <div class="inner w-full">
+ 
 
-    <div class=""> 
-        <i class="fa-regular fa-circle-user"></i>
+      <div class=" m-2 flex flex-col items-center"> 
+        <div class="flex flex-row items-center">
+          <i class="fa-regular fa-circle-user"></i>
+
+          <input id="register-name" type="text" placeholder="Name" class="bg-gray-100 text-lg pl-2">
+
+        </div>
+         
+         
+           <div class="w-3/4 mx-auto text-center">
+            <span id="name-error" class=" text-xs text-red-600"></span>
+
+           </div>
+      
+          </div>
+          <div class=" m-2 flex flex-col items-center"> 
+            <div class="flex flex-row items-center">
+              <i class="fa-solid fa-at"></i>
+
+    
+              <input id="register-email" type="text" placeholder="Email" class="bg-gray-100 text-lg pl-2">
+    
+            </div>
+             
+             
+               <div class="w-3/4 mx-auto text-center">
+                <span id="email-error" class=" text-xs text-red-600 text-center"></span>
+    
+               </div>
           
-        <input id="register-name" type="text" placeholder="Name" class="bg-gray-100 text-center text-lg">
-  
-      </div>
+              </div>
 
-    <div class=" m-2"> 
-      <i class="fa-solid fa-at"></i>
-      <input id="register-email" type="text" placeholder="Email" class="bg-gray-100 text-center text-lg">
+              <div class=" m-2 flex flex-col items-center"> 
+                <div class="flex flex-row items-center">
+                  <i class="fa-solid fa-key"></i>
+    
+        
+                  <input id="register-password" type="password" placeholder="Password" class="bg-gray-100 text-lg pl-2">
 
-    </div>
-    <div class="">
-      <i class="fa-solid fa-key"></i>
-      <input id="register-password" type="text" placeholder="Password" class="bg-gray-100 text-center text-lg">
-
-
-    </div>
-    <button type="button" class="btn bg-fuchsia-500 text-white m-4 w-full"> Sign up </button>
+        
+                </div>
+                 
+                 
+                   <div class="w-3/4 mx-auto text-center">
+                    <span id="password-error" class=" text-xs text-red-600 text-center"></span>
+        
+                   </div>
+              
+                  </div>
+</div>
+    <button id="register-button" type="button" class="btn bg-fuchsia-500 text-white m-4 w-full"> Sign up </button>
     <span class="text-sm text-center">Already a member?<br> Sign in <strong><a href="./login.html" class="underline text-rose-500"> here </a></strong></span>
   </form>
 </div>

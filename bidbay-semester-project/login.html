@@ -32,21 +32,45 @@
       <img src="./public/img/blacksmall.png" alt="" class="">
       <h1 class="font-display text-4xl text-center">    Dive in!</h1>  
     </div>
-    <div class=" m-2"> 
+
+
+    <div class="inner  w-full ">
+
+
+    <div class=" m-2 flex flex-col items-center"> 
+    <div class="flex flex-row items-center">
       <i class="fa-solid fa-at"></i>
-      <input type="text" placeholder="Email" class="bg-gray-100 text-center text-lg">
-
+      <input id="login-email" type="text" placeholder="Email" class="bg-gray-100 text-lg pl-2">
     </div>
-    <div class="">
-      <i class="fa-solid fa-key"></i>
-      <input type="text" placeholder="Password" class="bg-gray-100 text-center text-lg">
+     
+     
+       <div class="w-3/4 mx-auto text-center">
+        <span id="email-error" class="text-xs text-red-600"></span>
 
+       </div>
+  
+      </div>
+  
 
-    </div>
-    <button type="button" class="btn bg-rose-500 text-white m-4 w-full"> Sign in </button>
+      <div class=" m-2 flex flex-col items-center"> 
+        <div class="flex flex-row items-center">
+          <i class="fa-solid fa-key"></i>
+          <input id="login-password" type="password" placeholder="Password" class="bg-gray-100 text-lg pl-2">
+        </div>
+         
+         
+           <div class="w-3/4 mx-auto text-center">
+            <span id="password-error" class="text-xs text-red-600"></span>
+
+           </div>
+      
+          </div>
+        </div>
+
+    <button id="login-button" type="button" class="btn bg-rose-500 text-white m-4 w-full"> Sign in </button>
     <span class="text-sm text-center">Need an account?<br> Register <strong><a href="./register.html" class="underline text-rose-500"> here </a></strong></span>
   </form>
-</div>
+</div>  </div>
 
 
 
