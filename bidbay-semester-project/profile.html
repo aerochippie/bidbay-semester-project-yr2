@@ -23,13 +23,13 @@
     </div>
     <div class="flex flex-col">
       <div class="top">
-        <h1 class="text-xl"><strong class="font-display text-3xl">Hello,</strong> username!</h1>
+        <h1 class="text-xl" id="welcome-message"><strong class="font-display text-3xl">Hello, </strong></h1>
       </div>
 <div class="bottom flex flex-row items-center">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
     <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
   </svg>
-  <span class="text-sm pl-1"> your balance: -balance-</span>
+  <span class="text-sm pl-1" id="credits"> your balance: </span>
 </div>
 
     </div>
@@ -62,8 +62,8 @@
 
 <div class="profile-container w-screen py-28">
     <div class="profile flex flex-col w-2/3 p-4 mx-auto">
-        <div class="flex flex-col items-center justify-center">
-                <img src="public/img/pexels-photo-1009904.jpeg" alt="" class="rounded-full w-32 h-32 object-cover">
+        <div class="flex flex-col items-center justify-center" id="profile-avatar">
+        
         
         
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
@@ -72,11 +72,11 @@
             
         </div>
         <div class="text-center">
-            <span class=" text-3xl font-display"> username </span> <br>
-            <span> email@email.com </span><br>
-            <span> credits: 43534 </span><br>
-            <span> listings: 43 </span><br>
-            <span> bids won: 23 </span>
+            <span class=" text-3xl font-display" id="profile-name"> </span> <br>
+            <span id="profile-email"></span><br>
+            <span id="profile-credits"> credits:  </span><br>
+            <span id="profile-total-listings"> listings:  </span><br>
+            <span id="profile-total-won"> bids won: </span>
 
         </div>
         
@@ -132,6 +132,7 @@
        
 </body>
   <script type="module" src="./src/main.js"></script>
+  <script type="module" src="./src/dash.js"></script>
 
 
 </html>

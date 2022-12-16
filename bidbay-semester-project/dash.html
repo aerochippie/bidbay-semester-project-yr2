@@ -155,17 +155,38 @@
   </div>
 
   
-<div class="bids-posted flex flex-col items-center">
+
+
+
+
+
+
+
+
+
+
+
+<div class="bids-posted flex flex-col items-center" id="listings-posted-cards">
   <div class="title font-display text-3xl p-4">
     <h3> Your listings </h3>
   </div>
+
+
+
+
+
+
+
+
+
+
   <div class="card flex flex-col px-2 py-4 rounded-xl justify-around items-center">
     <div class="image w-4/5">
       <img src="public/img/exampleimg.jpeg" alt="" class="w-50 h-50 object-fill rounded-xl">
     </div>
     <div class="description flex flex-col text-gray-900 items-center gap-1">
       <div class="title text-xl">
-        <span> <strong> Item Name </strong>   </span>
+        <span id="listing-title"> <strong> Item Name </strong>   </span>
       </div>
       <div class="author text-xs italic">
         <span> author name</span>
@@ -240,6 +261,7 @@
        
 </body>
   <script type="module" src="./src/dash.js"></script>
+  <script type="module" src="./src/listings.js"></script>
 
 
 </html>

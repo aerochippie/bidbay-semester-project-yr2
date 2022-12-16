@@ -6,7 +6,6 @@ const accessToken = localStorage.getItem('bearerToken')
 const nameToken = localStorage.getItem('username')
 
 const userUrl = `${baseUrl}/api/v1/auction/profiles/${nameToken}`
-const listingUrl = `${baseUrl}/api/v1/auction/profiles/${nameToken}/listings`
 const newListingUrl = `${baseUrl}/api/v1/auction/listings`
 
 async function getUser(url) {
@@ -28,9 +27,22 @@ getUser(userUrl)
 function consumeUser(data) {
     const credits = document.getElementById("credits")
     const welcomeMessage = document.getElementById("welcome-message")
+    const avatar = document.getElementById("profile-avatar")
+    const profileName = document.getElementById("profile-name")
+    const profileEmail = document.getElementById("profile-email")
+    const profileCredits = document.getElementById("profile-credits")
+    const profileTotalListings = document.getElementById("profile-total-listings")
+    const profileTotalWon = document.getElementById("profile-total-won")
 
     credits.innerHTML += `<strong>${data.credits}</strong>`
     welcomeMessage.innerHTML += `${data.name}`
+    profileEmail.innerHTML += `${data.email}`
+    avatar.innerHTML += `
+     <img src="${data.avatar}" alt="" class="rounded-full w-32 h-32 object-cover" ">`
+     profileName.innerHTML += `${data.name}`
+     profileCredits.innerHTML += `${data.credits}`
+     profileTotalListings.innerHTML += `${data._count.listings}`
+    profileTotalWon.innerHTML += `${data.wins.length}`
 
 
 }
