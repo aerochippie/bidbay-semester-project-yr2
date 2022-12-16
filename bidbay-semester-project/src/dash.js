@@ -160,10 +160,9 @@ console.log(totalMyListings)
 const logOutButton = document.getElementById('logout');
 
 function logOut(){
+    
     localStorage.removeItem("bearerToken")
     localStorage.removeItem("username")
     window.location = "../index.html"
 }
 
-logOutButton.addEventListener('click', logOut()
-)
