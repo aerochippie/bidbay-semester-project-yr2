@@ -29,13 +29,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        working-directory: ./bidbay-semester-project
-        run: cd bidbay-semester-project
+        uses: actions/checkout@v3
       - name: Install Dependencies  
-        working-directory: ./bidbay-semester-project
+        working-directory: /home/runner/work/bidbay-semester-project-yr2/bidbay-semester-project
         run: npm i
       - name: Build vite
-        working-directory: ./bidbay-semester-project
+        working-directory: /home/runner/work/bidbay-semester-project-yr2/bidbay-semester-project
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v2
