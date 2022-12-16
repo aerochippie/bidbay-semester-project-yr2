@@ -30,11 +30,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Dependencies  
-        working-directory: /home/runner/work/bidbay-semester-project-yr2/bidbay-semester-project
+      - name: Install Dependencies
         run: npm i
       - name: Build vite
-        working-directory: /home/runner/work/bidbay-semester-project-yr2/bidbay-semester-project
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v2
@@ -42,7 +40,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './dist'
+          path: './bidbay-semester-project/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
